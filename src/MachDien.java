@@ -1,9 +1,10 @@
+
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class MachDien extends JPanel implements ActionListener{
-	Graphics2D g2d;
 	private static final long serialVersionUID = 1L;
 	
 	int x_pixel_kim1 = 736, y_pixel_kim1 = 150; //d 
@@ -14,9 +15,6 @@ public class MachDien extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		
-	}
-	public MachDien(Graphics2D g2d) {
-		this.g2d = g2d;
 	}
 	
 	public void layThamSoKim1(int xPixel, int yPixel) {
@@ -43,7 +41,7 @@ public class MachDien extends JPanel implements ActionListener{
 	}
 	
 	public void drawArrow1(Graphics g) {
-		g2d = (Graphics2D) g;
+		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.RED);
 		g2d.setStroke(new BasicStroke(3));	
 		g2d.drawLine(771, 150, x_pixel_kim1, y_pixel_kim1);
@@ -52,7 +50,7 @@ public class MachDien extends JPanel implements ActionListener{
 	}
 	
 	public void drawArrow2(Graphics g) {
-		g2d = (Graphics2D) g;
+		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.RED);
 		g2d.setStroke(new BasicStroke(3));	
 		g2d.drawLine(771, 380, x_pixel_kim2, y_pixel_kim2);
@@ -61,7 +59,7 @@ public class MachDien extends JPanel implements ActionListener{
 	}
 	
 	public void drawArrow3(Graphics g) {
-		g2d = (Graphics2D) g;
+		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.RED);
 		g2d.setStroke(new BasicStroke(3));
 		g2d.drawLine(151, 365, x_pixel_kim3, y_pixel_kim3);
@@ -71,7 +69,7 @@ public class MachDien extends JPanel implements ActionListener{
 	
 	public void drawBackground(Graphics g) {
 		
-		g2d = (Graphics2D) g;
+		Graphics2D g2d = (Graphics2D) g;
 		//defaultStroke = g2d.getStroke();
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
@@ -93,7 +91,7 @@ public class MachDien extends JPanel implements ActionListener{
 		String mA = "mA";
 		g2d.drawString(mA, 760, 170);
 		
-		// Thay các biến phụ thuộc vào đây để code điều khiển kim !
+		// Thay cÃ¡c biáº¿n phá»¥ thuá»™c vÃ o Ä‘Ã¢y Ä‘á»ƒ code Ä‘iá»�u khiá»ƒn kim !
 		
 		g2d.setColor(Color.BLACK);
 		g2d.drawString("1mA", 740, 230);
@@ -122,12 +120,12 @@ public class MachDien extends JPanel implements ActionListener{
 		g2d.drawString("10V", 780, 460);
 
 		
-		// Thay các biến phụ thuộc vào đây để code điều khiển kim !
+		// Thay cÃ¡c biáº¿n phá»¥ thuá»™c vÃ o Ä‘Ã¢y Ä‘á»ƒ code Ä‘iá»�u khiá»ƒn kim !
 		
 		g2d.setColor(Color.BLACK);
 		String V = "V";
 		g2d.drawString(V, 770, 400);
-		// Đoạn này vẽ ống dây solenoid
+		// Ä�oáº¡n nÃ y váº½ á»‘ng dÃ¢y solenoid
 		g2d.setColor(new Color(147, 160, 159));
 		g2d.fillOval(400, 220, 150, 140);
 		g2d.setColor(Color.black);
@@ -152,7 +150,7 @@ public class MachDien extends JPanel implements ActionListener{
 		g2d.drawString("6", 160, 325);
 		g2d.drawString("8", 188, 338);
 		
-		// Thay các biến phụ thuộc vào đây để code điều khiển kim !
+		// Thay cÃ¡c biáº¿n phá»¥ thuá»™c vÃ o Ä‘Ã¢y Ä‘á»ƒ code Ä‘iá»�u khiá»ƒn kim !
 		
 		g2d.setColor(Color.BLACK);
 		g2d.drawString("2,5A", 120, 450);
@@ -164,7 +162,7 @@ public class MachDien extends JPanel implements ActionListener{
 		g2d.drawRect(22, 25, 900, 650);
 		g2d.drawRect(21, 24, 900, 650);
 		
-		// Tham số để vẽ nét đứt bảng mạch
+		// Tham sá»‘ Ä‘á»ƒ váº½ nÃ©t Ä‘á»©t báº£ng máº¡ch
 		float[] dash = { 2f, 0f, 2f };
 		BasicStroke bs = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 1.0f, dash, 2f);
 		g2d.setStroke(bs);
@@ -176,3 +174,4 @@ public class MachDien extends JPanel implements ActionListener{
 	}
 	
 }
+
